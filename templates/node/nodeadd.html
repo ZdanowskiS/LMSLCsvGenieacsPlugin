@@ -1,0 +1,15 @@
+{block name="nodeaddbox-leftcolumn" append}
+<TR>
+    <TD>
+        <IMG SRC="img/netdev.gif" ALT="{trans("Net device:")}">
+    </TD>
+    <TD>
+    <SELECT NAME="nodedata[lcsvmodel]" id="lcsvmodel" {tip trigger="lcsvmodel" text="Select model"} >
+        <OPTION value="0">- {trans("none")} -</OPTION>
+        {foreach from=$LCsvmodels item=item key=key}
+		    <OPTION value="{$item.id}"{if $item.file == $nodedata.lcsvmodel} selected{/if}>{$item.id}</OPTION>
+        {/foreach}
+    </SELECT>
+    </TD>
+</TR>
+{/block}
